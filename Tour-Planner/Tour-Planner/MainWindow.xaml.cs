@@ -27,7 +27,6 @@ namespace Tour_Planner
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
         }
     }
 }
