@@ -30,29 +30,81 @@
         <TextBlock FontSize="30" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Hello" Name="Welcome"/>
         <Button Click="Button_Click" Grid.Column="0" Grid.Row="2" Name="Add" VerticalAlignment="Top" Content="Click Me!" Width="20"/>
         <GridSplitter Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-        <Border Margin="5" Grid.Column="2" Grid.Row="2" Background="LightGray">
+        <Border Margin="5" CornerRadius="10" Grid.Column="2" Grid.Row="2" Background="LightGray">
             
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10*"/>
-                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="35*"/>
                     <RowDefinition Height="45*"/>
                 </Grid.RowDefinitions>
-                <Border Grid.Column="0" Grid.Row="0">
-                    <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <StackPanel Orientation="Horizontal" Grid.Row="0">
 
-                        <RadioButton Background="Gray" Content="Route"
-                                     Height="Auto"
-                                     Foreground="Black"
-                                     FontSize="14"
-                                     IsChecked="True"/>
+                    <RadioButton Background="Gray" Content="Route"
+                                 Height="Auto"
+                                 Foreground="Black"
+                                 FontSize="14"
+                                 IsChecked="True"/>
 
-                        <RadioButton Background="Gray" Content="Description"
-                                     Foreground="Black"
-                                     Height="Auto"
-                                     FontSize="14"/>
-                    </StackPanel>
-                </Border>
+                    <RadioButton Background="Gray" Content="Description"
+                                 Foreground="Black"
+                                 Height="Auto"
+                                 FontSize="14"/>
+                </StackPanel>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="80*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="Gray" Margin="5"/>
+                    <FlowDocumentReader Grid.Row="1">
+                        <FlowDocument>
+                            <Table CellSpacing="0" BorderBrush="Black" BorderThickness="1">
+                                <Table.Columns>
+                                    <TableColumn Width="130"/>
+                                    <TableColumn Width="130"/>
+                                    <TableColumn Width="130"/>
+                                </Table.Columns>
+                                <TableRowGroup>
+                                    <TableRow>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>Date</Paragraph>
+                                        </TableCell>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>Duration</Paragraph>
+                                        </TableCell>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>Distance</Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>01.01.2021</Paragraph>
+                                        </TableCell>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>04:05:06</Paragraph>
+                                        </TableCell>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>75km</Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>02.01.2021</Paragraph>
+                                        </TableCell>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>02:25:26</Paragraph>
+                                        </TableCell>
+                                        <TableCell TextAlignment="Center" BorderBrush="Black" BorderThickness="1">
+                                            <Paragraph>220km</Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableRowGroup>
+                            </Table>
+                        </FlowDocument>
+                    </FlowDocumentReader>
+                        
+                </Grid>
             </Grid>
         </Border>
     </Grid>
